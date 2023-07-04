@@ -6,12 +6,11 @@ import pandas as pd
 from TaxiFareModel.params import MODEL_NAME
 from google.cloud import storage
 from sklearn.metrics import mean_absolute_error, mean_squared_error
+from TaxiFareModel.params import BUCKET_NAME, BUCKET_TEST_PATH
 
 PATH_TO_LOCAL_MODEL = 'model.joblib'
 
 AWS_BUCKET_TEST_PATH = "s3://wagon-public-datasets/taxi-fare-test.csv"
-
-BUCKET_NAME = "XXX"  # ⚠️ replace with your BUCKET NAME
 
 
 def get_test_data(nrows, data="s3"):
@@ -23,9 +22,9 @@ def get_test_data(nrows, data="s3"):
     if data == "local":
         df = pd.read_csv(path)
     elif data == "full":
-        df = pd.read_csv(AWS_BUCKET_TEST_PATH)
+        df = pd.read_csv(BUCKET_TEST_PATH)
     else:
-        df = pd.read_csv(AWS_BUCKET_TEST_PATH, nrows=nrows)
+        df = pd.read_csv(BUCKET_TEST_PATH, nrows=nrows)
     return df
 
 
