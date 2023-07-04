@@ -7,7 +7,7 @@ EXPERIMENT_NAME = "[PT] [Lisbon] [JoaoMarques1] linear + 1.0.0"
 
 PATH_TO_LOCAL_MODEL = 'model.joblib'
 
-AWS_BUCKET_TEST_PATH = "s3://wagon-public-datasets/taxi-fare-test.csv"
+BUCKET_TEST_PATH = "https://storage.cloud.google.com/wagon-data-804-marques/data/test.csv"
 
 
 ### GCP configuration - - - - - - - - - - - - - - - - - - -
@@ -28,6 +28,7 @@ BUCKET_NAME = 'wagon-data-804-marques'
 # /!\ here you need to decide if you are going to train using the provided and uploaded data/train_1k.csv sample file
 # or if you want to use the full dataset (you need need to upload it first of course)
 BUCKET_TRAIN_DATA_PATH = 'data/train_1k.csv'
+BUCKET_TEST_DATA_PATH = 'data/test.csv'
 
 ##### Training  - - - - - - - - - - - - - - - - - - - - - -
 

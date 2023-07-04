@@ -34,4 +34,4 @@ def clean_data(df, test=False):
 
 
 if __name__ == '__main__':
-    df = get_data()
+    df = get_data_from_gcp()
